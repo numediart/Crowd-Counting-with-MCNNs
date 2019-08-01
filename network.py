@@ -284,10 +284,10 @@ class MCNN:
             print(gt_path)
             if os.path.isfile(gt_path):
                 den = np.loadtxt(open(gt_path), delimiter = ",")
-                den_sum = np.sum(den)
+                den_sum = int(np.sum(den))
 
             numoppl = y_p
-        return numoppl, int(den_sum)
+        return numoppl, den_sum
 
 
 
